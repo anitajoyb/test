@@ -1,0 +1,7 @@
+sudo: required
+services:
+    -docker
+
+script:
+    -docker build -t  anita15docker/node .
+    -docker images anita15docker/node
