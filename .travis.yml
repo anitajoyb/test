@@ -1,4 +1,4 @@
-lanuage: node_js
+
 sudo: required
 
 services:
@@ -7,3 +7,12 @@ services:
 script:
     - docker build -t  anita15docker/node .
     - docker images anita15docker/node
+
+before_deploy:
+    - docker login -u <anita15docker> -p <Jesusdocker>
+
+before_deploy:
+    provider: script
+    script: docker push anita15docker/node
+    on:
+      branch: main
