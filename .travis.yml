@@ -9,7 +9,7 @@ script:
     - docker images anita15docker/node
 
 before_deploy:
-    - docker login -u <anita15docker> -p <Jesusdocker>
+    - docker login -u anita15docker -p Jesusdocker
 
 deploy:
     provider: script
