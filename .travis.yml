@@ -11,7 +11,7 @@ script:
 before_deploy:
     - docker login -u <anita15docker> -p <Jesusdocker>
 
-before_deploy:
+deploy:
     provider: script
     script: docker push anita15docker/node
     on:
